@@ -1,0 +1,86 @@
+[
+  {
+    "file": "tip-setting-help.png",
+    "title": "Hover a setting for help",
+    "caption": "Hover any setting name on Server Settings to see what it does and its default value.",
+    "kind": "tooltip"
+  },
+  {
+    "file": "tip-framework-card.png",
+    "title": "Compare frameworks",
+    "caption": "Hover a framework card on Install & Mods to read what it changes before you switch.",
+    "kind": "tooltip"
+  },
+  {
+    "file": "tip-compact-sidebar.png",
+    "title": "Compact sidebar labels",
+    "caption": "With the sidebar collapsed to icons, hover an icon to see which page it opens.",
+    "kind": "tooltip"
+  },
+  {
+    "file": "tip-console-search.png",
+    "title": "Console shortcuts",
+    "caption": "Hover the console search arrows to see their keyboard shortcuts, like Shift+F3 for the previous match.",
+    "kind": "tooltip"
+  },
+  {
+    "file": "console-autocomplete.png",
+    "title": "Command autocomplete",
+    "caption": "Start typing in the console box and pick a command from the list; each one shows its default and a short description.",
+    "kind": "feature"
+  },
+  {
+    "file": "command-library-search.png",
+    "title": "Command library",
+    "caption": "Open Console > Commands, search 2,600+ Rust and Carbon commands and press Use to put one in the console box.",
+    "kind": "feature"
+  },
+  {
+    "file": "settings-presets.png",
+    "title": "Settings presets",
+    "caption": "On Server Settings > Presets, pick a starter like 5x, check its values and press Apply.",
+    "kind": "feature"
+  },
+  {
+    "file": "settings-gamemode.png",
+    "title": "Pick a game mode",
+    "caption": "On Server Settings > World & map, choose the game mode from the server's own list.",
+    "kind": "feature"
+  },
+  {
+    "file": "identity-live-preview.png",
+    "title": "Live browser preview",
+    "caption": "Type your server name, description and website on Server Identity and watch the browser preview update as you type.",
+    "kind": "feature"
+  },
+  {
+    "file": "plugins-umod-search.png",
+    "title": "Find plugins on uMod",
+    "caption": "On Plugins > uMod, search by name or tag, sort the results and install a plugin with one click.",
+    "kind": "feature"
+  },
+  {
+    "file": "automation-templates.png",
+    "title": "Automation templates",
+    "caption": "Press New task on Automation and start from a template such as a daily restart or a nightly backup.",
+    "kind": "feature"
+  },
+  {
+    "file": "server-switcher.png",
+    "title": "Switch and add servers",
+    "caption": "Click the server card at the top of the sidebar to switch servers or add, import and edit them.",
+    "kind": "feature"
+  },
+  {
+    "file": "new-server-name-icon.png",
+    "title": "New server: name and icon",
+    "caption": "The New server wizard starts with a name, an icon and a colour, previewed as it will look in the sidebar.",
+    "kind": "feature"
+  },
+  {
+    "file": "new-server-framework.png",
+    "title": "New server: framework",
+    "caption": "In step 3 of the wizard, choose Vanilla, Carbon or Oxide; it installs together with the server.",
+    "kind": "feature"
+  }
+]

@@ -1,0 +1,29 @@
+Rust Server Control - Licence
+Copyright (c) 2026 Yanoee. All rights reserved.
+
+Rust Server Control ("the software") is free to download and use, for private and
+commercial server hosting, at no cost.
+
+You may:
+- download the software from this repository's GitHub releases;
+- install and run it on any number of your own computers and servers.
+
+You may not:
+- sell, rent or license the software or any part of it;
+- redistribute it, re-upload it or offer it for download anywhere else;
+- bundle it with other products or services;
+- modify, decompile, disassemble or reverse engineer it, except where the law
+  explicitly allows this despite this restriction;
+- remove or change any copyright notice.
+
+All rights not explicitly granted here are reserved by the author. The author may
+change these terms, or offer the software under other terms (including paid ones),
+for any future version.
+
+The software is provided "as is", without warranty of any kind. The author is not
+liable for any damage, data loss or downtime arising from its use.
+
+Rust Server Control is an unofficial tool. It is not affiliated with or endorsed by
+Facepunch Studios. Rust is a trademark of Facepunch Studios. Third-party components
+included in the software remain under their own licences; this licence does not
+apply to them.

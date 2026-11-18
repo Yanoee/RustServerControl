@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" width="480" height="320" role="img" aria-labelledby="t">
+<title id="t">Puzzle pieces snapping together next to a plugin list that goes from a compile error to reloaded</title>
+<defs>
+  <linearGradient id="gA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2E9BFF"/><stop offset="1" stop-color="#1A6FD6"/></linearGradient>
+  <linearGradient id="gB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7A78FF"/><stop offset="1" stop-color="#5E5CE6"/></linearGradient>
+  <linearGradient id="gC" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D17BFF"/><stop offset="1" stop-color="#8E44D6"/></linearGradient>
+  <linearGradient id="gD" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4BE07A"/><stop offset="1" stop-color="#1FA855"/></linearGradient>
+  <radialGradient id="halo"><stop offset="0" stop-color="#BF5AF2" stop-opacity=".28"/><stop offset="1" stop-color="#BF5AF2" stop-opacity="0"/></radialGradient>
+  <path id="pA" d="M0 0H80V28a12 12 0 0 1 0 24V80H52a12 12 0 0 1-24 0H0Z"/>
+  <path id="pB" d="M0 0H80V80H52a12 12 0 0 1-24 0H0V52a12 12 0 0 0 0-24Z"/>
+  <path id="pC" d="M0 0H28a12 12 0 0 0 24 0H80V28a12 12 0 0 1 0 24V80H0Z"/>
+  <path id="pD" d="M0 0H28a12 12 0 0 0 24 0H80V80H0V52a12 12 0 0 0 0-24Z"/>
+</defs>
+<style>
+  text{font-family:"Segoe UI",Inter,Arial,sans-serif}
+  .m{font-family:"Cascadia Mono",Consolas,"Courier New",monospace}
+  .pc{stroke:#fff;stroke-opacity:.28;stroke-width:1.5}
+  .d{animation:snap 7s cubic-bezier(.3,.7,.2,1) infinite}
+  @keyframes snap{0%{transform:translate(70px,-80px) rotate(14deg);opacity:0}8%{opacity:1}30%{transform:translate(-3px,3px) rotate(-2deg)}35%{transform:translate(1px,-1px) rotate(.5deg)}39%,88%{transform:none;opacity:1}96%,100%{transform:translate(70px,-80px) rotate(14deg);opacity:0}}
+  .ring{fill:none;stroke:#30D158;stroke-width:3;opacity:0;transform-box:fill-box;transform-origin:center;animation:ring 7s ease-out infinite}
+  @keyframes ring{0%,36%{opacity:0;transform:scale(.6)}38%{opacity:.9}55%,100%{opacity:0;transform:scale(1.7)}}
+  .err{animation:err 7s ease infinite}
+  @keyframes err{0%,34%{opacity:1}38%,94%{opacity:0}100%{opacity:1}}
+  .ok{opacity:0;animation:ok 7s ease infinite}
+  @keyframes ok{0%,36%{opacity:0}40%,90%{opacity:1}96%,100%{opacity:0}}
+  .tg{animation:tg 7s ease infinite}
+  @keyframes tg{0%,38%{transform:translateX(0)}42%,92%{transform:translateX(12px)}100%{transform:translateX(0)}}
+  .tgb{animation:tgb 7s ease infinite}
+  @keyframes tgb{0%,38%{fill:#3a3a44}42%,92%{fill:#30D158}100%{fill:#3a3a44}}
+  .bob{animation:bob 5s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important}.err{opacity:0}.ok{opacity:1}.tg{transform:translateX(12px)}.tgb{fill:#30D158}}
+</style>
+<circle cx="140" cy="160" r="150" fill="url(#halo)"/>
+
+<!-- pieces -->
+<g class="bob">
+  <use href="#pA" x="60" y="80" fill="url(#gA)" class="pc"/>
+  <use href="#pB" x="140" y="80" fill="url(#gB)" class="pc"/>
+  <use href="#pC" x="60" y="160" fill="url(#gC)" class="pc"/>
+  <path d="M220 160v80M140 240h80" stroke="#fff" stroke-opacity=".18" stroke-dasharray="4 5"/>
+  <g transform="translate(140 160)"><g class="d"><use href="#pD" fill="url(#gD)" class="pc"/><path d="M28 42l9 9 17-18" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+  <circle class="ring" cx="180" cy="200" r="34"/>
+  <text x="100" y="125" font-size="20" font-weight="800" fill="#fff" fill-opacity=".9" text-anchor="middle" class="m">{ }</text>
+  <text x="180" y="125" font-size="16" font-weight="800" fill="#fff" fill-opacity=".9" text-anchor="middle" class="m">.cs</text>
+  <text x="100" y="206" font-size="18" font-weight="800" fill="#fff" fill-opacity=".9" text-anchor="middle" class="m">&lt;/&gt;</text>
+</g>
+
+<!-- plugin list -->
+<rect x="280" y="64" width="186" height="196" rx="14" fill="#1f1f26" stroke="#fff" stroke-opacity=".14"/>
+<text x="296" y="90" font-size="13" font-weight="700" fill="#F5F5F7">Plugins</text>
+<path d="M280 102h186" stroke="#fff" stroke-opacity=".08"/>
+<g font-size="12.5" fill="#F5F5F7">
+  <text x="296" y="128">Kits.cs</text>
+  <text x="296" y="160">Teleport.cs</text>
+  <text x="296" y="192">NewPlugin.cs</text>
+</g>
+<g>
+  <rect x="420" y="116" width="30" height="16" rx="8" fill="#30D158"/><circle cx="442" cy="124" r="6" fill="#fff"/>
+  <rect x="420" y="148" width="30" height="16" rx="8" fill="#30D158"/><circle cx="442" cy="156" r="6" fill="#fff"/>
+  <rect class="tgb" x="420" y="180" width="30" height="16" rx="8" fill="#3a3a44"/><circle class="tg" cx="428" cy="188" r="6" fill="#fff"/>
+</g>
+<path d="M280 210h186" stroke="#fff" stroke-opacity=".08"/>
+<g class="err">
+  <rect x="292" y="220" width="162" height="28" rx="7" fill="#FF453A" fill-opacity=".16"/>
+  <circle cx="306" cy="234" r="6" fill="#FF453A"/><path d="M306 230.5v4M306 237v.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+  <text x="318" y="238" font-size="11" class="m" fill="#FF6A5F">error CS1002, line 41</text>
+</g>
+<g class="ok">
+  <rect x="292" y="220" width="162" height="28" rx="7" fill="#30D158" fill-opacity=".16"/>
+  <circle cx="306" cy="234" r="6" fill="#30D158"/><path d="M303 234l2 2 4-4" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="318" y="238" font-size="11.5" font-weight="600" fill="#30D158">NewPlugin reloaded</text>
+</g>
+</svg>

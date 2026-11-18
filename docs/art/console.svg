@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" width="480" height="320" role="img" aria-labelledby="t">
+<title id="t">A console window: log lines type in, a command is typed and autocomplete suggests matches</title>
+<defs>
+  <linearGradient id="acc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2E9BFF"/><stop offset="1" stop-color="#5E5CE6"/></linearGradient>
+  <linearGradient id="prog" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0A84FF"/><stop offset=".6" stop-color="#5E5CE6"/><stop offset="1" stop-color="#E28CFF"/></linearGradient>
+  <radialGradient id="halo"><stop offset="0" stop-color="#5E5CE6" stop-opacity=".3"/><stop offset="1" stop-color="#5E5CE6" stop-opacity="0"/></radialGradient>
+</defs>
+<style>
+  text{font-family:"Segoe UI",Inter,Arial,sans-serif}
+  .m{font-family:"Cascadia Mono",Consolas,"Courier New",monospace;font-size:12px}
+  .cov{animation-duration:10s;animation-iteration-count:infinite;animation-timing-function:steps(22,end)}
+  .c1{animation-name:c1}.c2{animation-name:c2}.c3{animation-name:c3}.c4{animation-name:c4}.c5{animation-name:c5}.c6{animation-name:c6;animation-timing-function:steps(8,end)}
+  @keyframes c1{0%{transform:translateX(0)}6%,100%{transform:translateX(330px)}}
+  @keyframes c2{0%,8%{transform:translateX(0)}14%,100%{transform:translateX(330px)}}
+  @keyframes c3{0%,16%{transform:translateX(0)}22%,100%{transform:translateX(330px)}}
+  @keyframes c4{0%,24%{transform:translateX(0)}30%,100%{transform:translateX(330px)}}
+  @keyframes c5{0%,32%{transform:translateX(0)}38%,100%{transform:translateX(330px)}}
+  @keyframes c6{0%,44%{transform:translateX(0)}52%,100%{transform:translateX(64px)}}
+  .body{animation:wipe 10s ease infinite}
+  @keyframes wipe{0%,88%{opacity:1}94%{opacity:0}100%{opacity:1}}
+  .pop{opacity:0;transform-box:fill-box;transform-origin:top left;animation:pop 10s cubic-bezier(.2,.8,.2,1) infinite}
+  @keyframes pop{0%,55%{opacity:0;transform:translateY(-6px) scale(.96)}59%,88%{opacity:1;transform:none}93%,100%{opacity:0}}
+  .hl{animation:hl 10s ease infinite}
+  @keyframes hl{0%,64%{transform:translateY(0)}68%,88%{transform:translateY(24px)}100%{transform:translateY(0)}}
+  .caret{animation:caret 1s steps(1) infinite}
+  @keyframes caret{0%,50%{opacity:1}50.01%,100%{opacity:0}}
+  .halo{animation:breathe 7s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+  @keyframes breathe{0%,100%{transform:scale(.9)}50%{transform:scale(1.05)}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important}.cov{display:none}.pop{opacity:1}}
+</style>
+<circle class="halo" cx="240" cy="170" r="210" fill="url(#halo)"/>
+<rect x="10" y="10" width="460" height="300" rx="16" fill="#1b1b21" stroke="#fff" stroke-opacity=".13"/>
+<path d="M10 44h460" stroke="#fff" stroke-opacity=".09"/>
+<rect x="24" y="19" width="16" height="16" rx="4" fill="url(#acc)"/>
+<path d="M28 27l3 2.5-3 2.5M33 32h4" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+<text x="48" y="32" font-size="12.5" font-weight="600" fill="#F5F5F7" fill-opacity=".8">Console</text>
+<path d="M404 27h10M424 22h10v10h-10zM444 22l10 10M454 22l-10 10" stroke="#EBEBF5" stroke-opacity=".4" fill="none"/>
+
+<!-- filters -->
+<rect x="24" y="54" width="40" height="22" rx="7" fill="#fff" fill-opacity=".15"/>
+<text x="44" y="69" font-size="11.5" font-weight="600" fill="#F5F5F7" text-anchor="middle">All</text>
+<rect x="70" y="54" width="54" height="22" rx="7" fill="#fff" fill-opacity=".055" stroke="#fff" stroke-opacity=".09"/>
+<circle cx="81" cy="65" r="3" fill="#FF453A"/>
+<text x="88" y="69" font-size="11.5" fill="#EBEBF5" fill-opacity=".62">Errors</text>
+<rect x="130" y="54" width="48" height="22" rx="7" fill="#fff" fill-opacity=".055" stroke="#fff" stroke-opacity=".09"/>
+<circle cx="141" cy="65" r="3" fill="#BF5AF2"/>
+<text x="148" y="69" font-size="11.5" fill="#EBEBF5" fill-opacity=".62">Chat</text>
+<rect x="306" y="54" width="150" height="22" rx="7" fill="#000" fill-opacity=".25" stroke="#fff" stroke-opacity=".09"/>
+<circle cx="319" cy="64" r="4" fill="none" stroke="#EBEBF5" stroke-opacity=".45" stroke-width="1.5"/>
+<path d="M322 67l3.5 3.5" stroke="#EBEBF5" stroke-opacity=".45" stroke-width="1.5" stroke-linecap="round"/>
+<text x="332" y="69" font-size="11.5" fill="#EBEBF5" fill-opacity=".38">Search output</text>
+
+<g class="body">
+  <!-- log lines -->
+  <g class="m">
+    <text x="28" y="106" fill="#30D158">Server startup complete</text>
+    <text x="28" y="130" fill="#EBEBF5" fill-opacity=".62">[Carbon] Loaded plugin Kits v2.1.0</text>
+    <text x="28" y="154" fill="#64D2FF">Hamster joined the game (14/100)</text>
+    <text x="28" y="178" fill="#BF5AF2">[chat] Hamster: wipe when?</text>
+    <text x="28" y="202" fill="#FF9F0A">Saved 41,203 ents, took 0.42s</text>
+  </g>
+  <g fill="#1b1b21">
+    <rect class="cov c1" x="24" y="92" width="330" height="20"/>
+    <rect class="cov c2" x="24" y="116" width="330" height="20"/>
+    <rect class="cov c3" x="24" y="140" width="330" height="20"/>
+    <rect class="cov c4" x="24" y="164" width="330" height="20"/>
+    <rect class="cov c5" x="24" y="188" width="330" height="20"/>
+  </g>
+
+  <!-- input -->
+  <rect x="24" y="264" width="432" height="32" rx="9" fill="#000" fill-opacity=".28" stroke="url(#prog)" stroke-opacity=".7"/>
+  <text x="38" y="284" class="m" fill="#0A84FF">&gt;</text>
+  <text x="54" y="284" class="m" fill="#F5F5F7">server.w</text>
+  <rect class="cov c6" x="52" y="270" width="64" height="20" fill="#121216"/>
+  <rect class="caret" x="113" y="273" width="7" height="14" rx="1" fill="#F5F5F7"/>
+
+  <!-- autocomplete -->
+  <g class="pop">
+    <rect x="40" y="186" width="220" height="74" rx="10" fill="#26262e" stroke="#fff" stroke-opacity=".16"/>
+    <rect class="hl" x="46" y="192" width="208" height="24" rx="7" fill="#0A84FF" fill-opacity=".28"/>
+    <text x="56" y="208" class="m" fill="#F5F5F7">server.worldsize</text>
+    <text x="56" y="232" class="m" fill="#F5F5F7">server.writecfg</text>
+    <text x="56" y="252" font-size="10" fill="#EBEBF5" fill-opacity=".38">Tab to complete</text>
+  </g>
+</g>
+</svg>
